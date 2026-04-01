@@ -1,16 +1,8 @@
-# flutter_plugin_pubdev
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Oleh: Rangga Saputra (2340304043
+)Deskripsi Proyek:
+Dalam praktikum ini, saya belajar cara mengintegrasikan package eksternal dari pub.dev ke dalam proyek Flutter. Proyek ini mendemonstrasikan penggunaan plugin auto_size_text untuk menangani teks yang responsif terhadap ukuran container.Langkah-Langkah Pengerjaan
+1. Inisialisasi ProjectLangkah awal yang saya lakukan adalah membuat project baru bernama flutter_plugin_pubdev. Setelah project siap, saya menginisialisasi Git lokal dan menghubungkannya ke repository GitHub saya di agaa27/flutter_plugin_pubdev.
+2. Menambahkan Plugin (Langkah 2)Saya menambahkan plugin auto_size_text melalui terminal dengan perintah:Bashflutter pub add auto_size_text
+Maksud dari langkah ini: Adalah untuk mendaftarkan dependensi pihak ketiga ke dalam file pubspec.yaml. Dengan melakukan ini, Flutter akan mengunduh library tersebut sehingga saya bisa memanggil fungsi AutoSizeText di dalam kode program.
+3. Pembuatan Widget Kustom (Langkah 5)Saya membuat sebuah file baru bernama red_text_widget.dart. Di dalamnya, saya membuat class RedTextWidget yang merupakan sebuah StatelessWidget.Maksud dari langkah ini: Saya membuat widget yang "reusable" atau dapat digunakan kembali. Widget ini memiliki parameter constructor text sehingga saya bisa menampilkan teks apa pun dengan gaya yang sudah ditentukan (warna merah dan kemampuan auto-resize) hanya dengan memanggil satu baris kode.
+4. Implementasi dan Perbedaan Widget (Langkah 6)Pada tahap akhir, saya memasukkan dua jenis widget teks ke dalam main.dart untuk membandingkan hasilnya:Widget RedTextWidget (AutoSizeText): Saya letakkan di dalam Container dengan lebar hanya 50px. Hasilnya, teks secara otomatis mengecil agar tetap muat di dalam kotak kuning tersebut.Widget Text Standar: Saya letakkan di dalam Container lebar 100px. Perbedaannya, teks ini tidak fleksibel. Jika teks melebihi lebar kotak, maka teks akan terpotong atau menghilang (overflow) tanpa mengecilkan ukuran hurufnya.Analisis Parameter auto_size_textBerdasarkan dokumentasi yang saya pelajari, berikut adalah fungsi parameter yang saya gunakan:ParameterPenjelasanstyleMengatur gaya dasar teks (seperti ukuran maksimal dan warna).minFontSizeBatas ukuran terkecil agar teks tidak terus mengecil sampai tidak terbaca.stepGranularityMenentukan interval penurunan ukuran font (misal: turun per 1px atau per 5px).maxLinesMembatasi jumlah baris teks sebelum proses pengecilan font dilakukan.overflowMenentukan tanda (seperti titik-titik/ellipsis) jika teks tetap tidak muat pada ukuran terkecil.Tugas MandiriSaya juga mencoba memasukkan AutoSizeText ke dalam sebuah Row.Temuannya: Jika dimasukkan ke dalam Row, kita wajib membungkusnya dengan widget Expanded. Tanpa Expanded, AutoSizeText tidak akan berfungsi karena Row memberikan ruang horizontal yang tak terbatas, sehingga plugin tidak tahu kapan harus mulai mengecilkan teks.

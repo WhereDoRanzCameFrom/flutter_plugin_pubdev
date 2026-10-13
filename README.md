@@ -3,7 +3,7 @@ Oleh: Rangga Saputra
 # Deskripsi Proyek:
 
 Dalam praktikum ini, saya belajar cara mengintegrasikan package eksternal dari pub.dev ke dalam proyek Flutter. Proyek ini mendemonstrasikan penggunaan plugin auto_size_text untuk menangani teks yang responsif terhadap ukuran container.Langkah-Langkah Pengerjaan
-1. Inisialisasi ProjectLangkah awal yang saya lakukan adalah membuat project baru bernama flutter_plugin_pubdev. Setelah project siap, saya menginisialisasi Git lokal dan menghubungkannya ke repository GitHub saya di agaa27/flutter_plugin_pubdev.
+1. Inisialisasi ProjectLangkah awal yang saya lakukan adalah membuat project baru bernama flutter_plugin_pubdev. Setelah project siap, saya menginisialisasi Git lokal dan menghubungkannya ke repository GitHub saya di WhereDoRanzCamefrom/flutter_plugin_pubdev.
 2. Menambahkan Plugin (Langkah 2)Saya menambahkan plugin auto_size_text melalui terminal dengan perintah:Bashflutter pub add auto_size_text
 Maksud dari langkah ini: Adalah untuk mendaftarkan dependensi pihak ketiga ke dalam file pubspec.yaml. Dengan melakukan ini, Flutter akan mengunduh library tersebut sehingga saya bisa memanggil fungsi AutoSizeText di dalam kode program.
 3. Pembuatan Widget Kustom (Langkah 5)Saya membuat sebuah file baru bernama red_text_widget.dart. Di dalamnya, saya membuat class RedTextWidget yang merupakan sebuah StatelessWidget.Maksud dari langkah ini: Saya membuat widget yang "reusable" atau dapat digunakan kembali. Widget ini memiliki parameter constructor text sehingga saya bisa menampilkan teks apa pun dengan gaya yang sudah ditentukan (warna merah dan kemampuan auto-resize) hanya dengan memanggil satu baris kode.

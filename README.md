@@ -1,5 +1,7 @@
-Oleh: Rangga Saputra (2340304043
-)Deskripsi Proyek:
+Oleh: Rangga Saputra
+
+#Deskripsi Proyek:
+
 Dalam praktikum ini, saya belajar cara mengintegrasikan package eksternal dari pub.dev ke dalam proyek Flutter. Proyek ini mendemonstrasikan penggunaan plugin auto_size_text untuk menangani teks yang responsif terhadap ukuran container.Langkah-Langkah Pengerjaan
 1. Inisialisasi ProjectLangkah awal yang saya lakukan adalah membuat project baru bernama flutter_plugin_pubdev. Setelah project siap, saya menginisialisasi Git lokal dan menghubungkannya ke repository GitHub saya di agaa27/flutter_plugin_pubdev.
 2. Menambahkan Plugin (Langkah 2)Saya menambahkan plugin auto_size_text melalui terminal dengan perintah:Bashflutter pub add auto_size_text
